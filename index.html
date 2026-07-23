@@ -111,7 +111,7 @@
      <h1>Welcome to Nootech Computer Centre's Internal Test Portal</h1>
     <h3>An Authorized Learning Centre Of OKCL(OS-CIT – ଓଡିଶା ରାଜ୍ୟ ମୁକ୍ତ ବିଶ୍ୱବିଦ୍ୟାଳୟ ପ୍ରମାଣିତ ସନଦ)</h3>
     <h4>An Authorized Facilitation Centre for CCC/BCC Examination NIELIT, MeitY, Govt. of India(ଭାରତ ସରକାର)</h4>
-     <div class="timer" id="timer">Exam Time: 40:00</div>
+     <div class="timer" id="timer">Exam Time: 60:00</div>
   </header>
 
   <section class="form-section">
@@ -159,7 +159,7 @@
       let timer = duration, minutes, seconds;
       timerInterval = setInterval(() => {
         minutes = Math.floor(timer / 60);
-        seconds = timer % 60;
+        seconds = 40 timer % 60;
         display.textContent = `Exam Time: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
         
         if (--timer < 0) {
