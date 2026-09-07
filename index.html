@@ -102,6 +102,24 @@
       color: #b91c1c;
       margin-top: 40px;
     }
+	  .cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
 		
   </style>
 </head>
@@ -117,8 +135,10 @@
   <section class="form-section">
     <p id="instruction-text">Please click the button below to start the exam:</p>
     <div id="start-btn-section" style="text-align:center; margin-top: 30px;">
-      <a href="#" onclick="openExam(); return false;" class="cta-button">Start Exam</a>
-    </div>
+  <button type="button" onclick="openExam()" class="cta-button">
+    Start Exam
+  </button>
+</div>
 
     <!-- Hidden iframe initially -->
     <iframe id="examFrame"></iframe>
