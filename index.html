@@ -136,48 +136,57 @@
       </a>
     </div>
   </div>
-   <script>
-    let timerInterval;
+<script>
+  let timerInterval;
 
-    function openExam() {
-      const frame = document.getElementById('examFrame');
-      const btnSection = document.getElementById('start-btn-section');
-      const instructionText = document.getElementById('instruction-text');
-      const timerDisplay = document.getElementById('timer');
+  function openExam() {
+    const frame = document.getElementById('examFrame');
+    const btnSection = document.getElementById('start-btn-section');
+    const instructionText = document.getElementById('instruction-text');
+    const timerDisplay = document.getElementById('timer');
 
-       <!--  EXAM FORM LINK NO EXAM FORM URL https://forms.gle/ux4p4Ti65GBbTcLm6 -->
+    // Google Form
+    frame.src = "https://forms.gle/BeXZAjXDVNNgaGoN9";
 
-      frame.src = "https://forms.gle/BeXZAjXDVNNgaGoN9";
-      frame.style.display = "block";
-      btnSection.style.display = "none";
-      instructionText.style.display = "none";
+    frame.style.display = "block";
+    btnSection.style.display = "none";
+    instructionText.style.display = "none";
 
-      startTimer(30 * 60, timerDisplay); // 30 minutes
-    }
+    // Start 30-minute timer
+    startTimer(30 * 60, timerDisplay);
+  }
 
-    function startTimer(duration, display) {
-      let timer = duration, minutes, seconds;
-      timerInterval = setInterval(() => {
-        minutes = Math.floor(timer / 60);
-        seconds = 40 timer % 60;
-        display.textContent = `Exam Time: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
-        
-        if (--timer < 0) {
-          clearInterval(timerInterval);
-          endExam();
-        }
-      }, 1000);
-    }
+  function startTimer(duration, display) {
+    let timer = duration;
 
-    function endExam() {
-      const frame = document.getElementById('examFrame');
-      const msg = document.getElementById('timeUpMsg');
-      frame.style.display = "none";
-      msg.style.display = "block";
-      document.getElementById('timer').textContent = "Exam Ended";
-      alert("⏰ Time is up! Your exam session has ended.");
-    }
-  </script>
+    timerInterval = setInterval(() => {
+      const minutes = Math.floor(timer / 60);
+      const seconds = timer % 60;
+
+      display.textContent =
+        `Exam Time: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+      timer--;
+
+      if (timer < 0) {
+        clearInterval(timerInterval);
+        endExam();
+      }
+    }, 1000);
+  }
+
+  function endExam() {
+    const frame = document.getElementById('examFrame');
+    const msg = document.getElementById('timeUpMsg');
+
+    frame.style.display = "none";
+    msg.style.display = "block";
+
+    document.getElementById('timer').textContent = "Exam Ended";
+
+    alert("⏰ Time is up! Your exam session has ended.");
+  }
+</script>
 
 </body>
 </html>
