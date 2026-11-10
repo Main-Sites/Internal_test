@@ -149,7 +149,7 @@ async function submitExam(reason){
     candidateName:candidate?.name||"",
     mobile:candidate?.mobile||"",
     examDate:candidate?.examDate||"",
-    examTopic:EXAM_CONFIG.examTopic,
+    examTopic: candidate?.examTopic || EXAM_CONFIG.examTopic,
     violations:String(violations),
     reason:String(reason||"Submitted"),
     startedAt:startedAt?new Date(startedAt).toISOString():""
