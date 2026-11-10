@@ -10,7 +10,7 @@ const EXAM_CONFIG = {
   accessCode: "NOOTECH2026", // Demo-only access gate; production access codes should also be checked server-side.
   requireFutureOrTodayDate: true,
   // Paste the deployed Google Apps Script Web App URL here. Leave blank for the original local-demo mode.
-  googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbz6OeCpndz_78mKDjC9hck6dz1LQFZtBV4Mijay8Rm5hWRK-h0oxHX2OzklaqLSnoAaJg/exec"
+  googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbychzkhzpZy03DBStWJjGzZozib4K8XQb9NFx937XkzsB7hnD8Gto3y7ymn9JuwPDib/exec"
 };
 
 // Replace these sample questions with the approved exam bank before publishing.
