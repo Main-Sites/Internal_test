@@ -185,3 +185,17 @@ body{background:var(--paper);color:var(--ink)}
 .manager-footer b{color:#e2e8f5}
 .text-danger-btn{color:#ff8793}
 .field select option{background:#1b2537;color:#e7ecf8}
+
+/* Result review clarity and footer attribution — visual-only additions */
+.developer-credit{display:block;font-size:9px;color:#b7c3dc;margin-top:5px;letter-spacing:.15px}
+.review-item h4{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.review-status{display:inline-flex;align-items:center;flex-shrink:0;border-radius:100px;padding:5px 8px;font-size:8px;line-height:1;font-weight:800;letter-spacing:.7px}
+.status-correct{background:#173f36;color:#75e4bd;border:1px solid #2c8069}
+.status-wrong{background:#482630;color:#ff9aa5;border:1px solid #87414e}
+.status-unanswered{background:#44371f;color:#f3ca87;border:1px solid #78602f}
+.review-item.review-correct{border-left:3px solid #48c99c}
+.review-item.review-wrong{border-left:3px solid #e76a7b}
+.review-item.review-unanswered{border-left:3px solid #d5a64f}
+.review-item .unanswered-answer{color:#f3ca87;font-weight:700}
+.review-item .review-explanation{padding:9px 11px;margin-top:9px;border-radius:8px;background:#202b3f;color:#c4cee1}
+@media(max-width:520px){.review-item h4{display:block}.review-status{margin-top:8px}}
