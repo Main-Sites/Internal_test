@@ -52,7 +52,10 @@ const name = $("candidateName").value.trim();
 const mobile = cleanMobile($("mobile").value);
 const date = $("examDate").value;
 const topic = $("examTopic").value;
-
+if (!topic) {
+  $("formError").textContent = "Please select an examination topic.";
+  return;
+}
    
    
  if(name.length < 2){$("formError").textContent="Please enter the candidate’s full name.";return;}
