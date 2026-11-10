@@ -1,214 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Internal_Test | Nootech Computer Centre</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1f2937; }
-
-    /* ===== HERO SECTION ===== */
-    header {
-     background: linear-gradient(135deg, #0a2540, #2563eb, #ffffff);
-      background-size: 400% 400%;
-      animation: gradientShift 8s ease infinite;
-      color: #fff;
-      padding: 70px 20px;
-      text-align: center;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 700; }
-    header h3 { font-weight: 400; font-size: 1.2rem; max-width: 800px; margin: auto; }
-
-    /* ===== FORM SECTION ===== */
-    .form-section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-    .form-section p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-	  /* ===== CTC BUTTON SECTION ===== */
-	   .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #1e3a8a;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #3b82f6;
-    }
-	
-	/* ===== FOOTER ===== */
-    .footer {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.95rem;
-      border-top: 3px solid #ff7e5f;
-    }
-
-    .social-links {
-      margin-top: 20px;
-    }
-    .social-links a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #fff;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: transform 0.3s, color 0.3s;
-    }
-    .social-links a:hover {
-      transform: scale(1.1);
-      color: #feb47b;
-    }
-
-    .social-links img {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-    }
-	 #timeUpMsg {
-      display: none;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #b91c1c;
-      margin-top: 40px;
-    }
-	  .cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #1e3a8a;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.cta-button:hover {
-  background: #3b82f6;
-  transform: translateY(-2px);
-}
-		
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10172b">
+<title>Internal_Test|Nootech Exam Portals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<nav class="nav">
+<a class="brand" href="#" aria-label="Nootech home"><img src="assets/image/ntcicon.PNG" class="brand-logo"><span>NOOTECH <small>EXAM ARENA</small></span></a>
 
-  <header>
-     <h1>Welcome to Nootech Computer Centre's Internal Test Portal</h1>
-    <h3>An Authorized Learning Centre Of OKCL(OS-CIT – ଓଡିଶା ରାଜ୍ୟ ମୁକ୍ତ ବିଶ୍ୱବିଦ୍ୟାଳୟ ପ୍ରମାଣିତ ସନଦ)</h3>
-    <h4>An Authorized Facilitation Centre for CCC/BCC Examination NIELIT, MeitY, Govt. of India(ଭାରତ ସରକାର)</h4>
-     <div class="timer" id="timer">Exam Time: 60:00</div>
-  </header>
-
-  <section class="form-section">
-    <p id="instruction-text">Please click the button below to start the exam:</p>
-    <div id="start-btn-section" style="text-align:center; margin-top: 30px;">
-  <button type="button" onclick="openExam()" class="cta-button">
-    Start Exam
-  </button>
+  <div class="nav-right"><span class="live-dot"></span><span>EXAM PORTAL</span><span class="nav-divider"></span><span class="nav-date" id="todayLabel">Nootech_Internal_Test</span></div>
+</nav>
+<main class="shell">
+  <section id="landing" class="landing">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-icon">✦</span> YOUR NEXT LEVEL STARTS HERE</div>
+      <h1>Prepare smarter.<br><span>Perform better.</span></h1>
+      <p class="hero-lede">A focused, exam-style practice environment built for NIELIT aspirants. Test your knowledge, manage your time, and track your performance.</p>
+      <div class="hero-pills"><span>✓ Timed mock tests</span><span>✓ Instant score</span><span>✓ Exam integrity alerts</span></div>
+      <div class="stats-row">
+        <div class="stat"><strong>25<span> min</span></strong><small>Test duration</small></div>
+        <div class="stat"><strong id="landingQuestionCount">10</strong><small>Available questions</small></div>
+        <div class="stat"><strong>4</strong><small>Violation limit</small></div>
+      </div>
+      <div class="hero-note"><span class="note-icon">ⓘ</span><span><b>Before you begin</b><br>Keep your details ready, stay on the exam screen, and use your authorized access code.</span></div>
+    </div>
+    <div class="entry-wrap">
+      <div class="entry-card">
+        <div class="card-topline"><span class="mini-tag">CANDIDATE CHECK-IN</span><span class="shield">◈ SECURE SESSION</span></div>
+        <h2>Set up your exam</h2><p class="card-subtitle">Enter the details exactly as registered.</p>
+        <form id="candidateForm" novalidate>
+          <label for="candidateName">Full name <span>*</span></label>
+          <div class="field"><span class="field-icon">♙</span><input id="candidateName" name="candidateName" type="text" autocomplete="name" placeholder="Enter your full name" maxlength="80" required></div>
+          <label for="mobile">10-digit mobile number <span>*</span></label>
+          <div class="field"><span class="field-icon">⌕</span><span class="country-code">+91</span><input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="9876543210" maxlength="10" pattern="[6-9][0-9]{9}" required></div>
+          <small class="field-hint">Enter a valid Indian mobile number. OTP verification requires a connected SMS service.</small>
+          <label for="examDate">Date of examination <span>*</span></label>
+          
+          <div class="field"><span class="field-icon">▦</span><input id="examDate" name="examDate" type="date" required></div>
+          <label for="examTopic">Exam topic / subject <span>*</span></label>
+         
+<div class="field">
+    <span class="field-icon">▤</span>
+    <select id="examTopic" name="examTopic" required>
+        <option value="" disabled selected>Select Exam Topic</option>
+        <option value="Fundamentals">Fundamentals</option>
+        <option value="Operating System">Operating System</option>
+        <option value="Writer">Ms-Word</option>
+        <option value="Calc">Ms-Excel</option>
+        <option value="Presenter">Ms-PowerPoint</option>
+		<option value="Presenter">Ms-Access</option>
+		<option value="Presenter">Internet</option>
+    </select>
 </div>
 
-    <!-- Hidden iframe initially -->
-    <iframe id="examFrame"></iframe>
-    <p id="timeUpMsg">⏰ Time’s up! Your exam has ended. Please ensure your responses are submitted.</p>
+          <div class="exam-summary"><div class="summary-icon">⏱</div><div><b>Import_Internal_Sem_Ques.</b><small>40 minutes <i>•</i> <span id="examSummaryQuestionCount">10</span> questions <i>•</i> 1 mark each</small></div><span class="summary-arrow">↗</span></div>
+          <button class="primary-btn" type="submit">Continue to access code <span>→</span></button>
+          <p class="privacy-note">🔒 Your details are used to identify this practice session.</p>
+          <p id="formError" class="error-message" role="alert"></p>
+        </form>
+      </div>
+      <div class="under-card"><span>✦</span> POWERED BY <b>NOOTECH COMPUTER CENTRE</b></div>
+      <button id="openQuestionManager" class="manager-link" type="button">⚙ Manage question bank (CSV import)</button>
+    </div>
   </section>
 
-  <div class="footer">
-       &copy; 2025 Internal Test Porta | Nootech Computer Centre. All rights reserved. | Empowering Digital Innovation |  <a href="https://nootechcomputercentre.github.io/main-site/"target="_blank">Visit Our Site</a>
-    <div class="social-links">
-      <a href="https://facebook.com/yourpage" target="_blank" title="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://instagram.com/yourprofile" target="_blank" title="Instagram">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-      </a>
+  <section id="questionManager" class="manager-card hidden" aria-labelledby="managerTitle">
+    <button id="closeQuestionManager" class="back-link" type="button">← Back to exam home</button>
+    <div class="eyebrow">ADMIN TOOL · QUESTION BANK</div>
+    <h2 id="managerTitle">Import Internal questions</h2>
+    <p class="card-subtitle">Upload a CSV file containing up to 50 multiple-choice questions per batch. Questions are validated before they are added; existing questions are not overwritten.</p>
+    <div class="manager-warning"><b>Setup required:</b> configure the Google Apps Script Web App URL in <code>app.js</code> to use the central Google Sheets bank. When configured, answer keys are not sent to the browser before submission. The local CSV mode remains available only when the URL is blank.</div>
+    <div class="manager-actions"><button id="downloadCsvTemplate" class="secondary-btn" type="button">↓ Download CSV template</button><label class="upload-label" for="csvFile">Choose CSV file</label><input id="csvFile" type="file" accept=".csv,text/csv" hidden></div>
+    <p class="csv-format"><b>Required CSV columns:</b> <code>question,optionA,optionB,optionC,optionD,answer,explanation</code><br>Answer can be <code>1–4</code> or <code>A–D</code>. Use double quotes around fields containing commas or line breaks.</p>
+    <label for="csvText">Or paste CSV content</label>
+    <textarea id="csvText" class="csv-textarea" rows="8" spellcheck="false" placeholder='question,optionA,optionB,optionC,optionD,answer,explanation&#10;"What does CPU stand for?",Central Processing Unit,Computer Personal Unit,Central Program Utility,Control Processing User,1,"CPU stands for Central Processing Unit."'></textarea>
+    <div class="manager-actions"><button id="validateCsv" class="secondary-btn" type="button">Validate &amp; preview</button><button id="importCsv" class="primary-btn" type="button" disabled>Add valid questions</button></div>
+    <p id="importStatus" class="import-status" role="status" aria-live="polite">No CSV loaded. Download the template to get started.</p>
+    <div id="csvPreview" class="csv-preview"></div>
+    <div class="manager-footer"><span>Questions currently available: <b id="managerQuestionCount">10</b></span><button id="removeImportedQuestions" class="text-danger-btn" type="button">Remove browser-imported questions</button></div>
+  </section>
+
+  <section id="accessSection" class="narrow-card hidden" aria-labelledby="accessTitle">
+    <button class="back-link" id="backToDetails">← Back to candidate details</button>
+    <div class="access-symbol">⌑</div><div class="eyebrow centered">AUTHORIZED CANDIDATES ONLY</div>
+    <h2 id="accessTitle">Enter your access code</h2>
+    <p class="card-subtitle centered">Ask your exam administrator for the code. Questions remain locked until the code is accepted.</p>
+    <form id="accessForm">
+      <label for="accessCode">Examination access code <span>*</span></label>
+      <div class="field"><span class="field-icon">♙</span><input id="accessCode" type="password" autocomplete="off" placeholder="Enter access code" required maxlength="40"></div>
+      <button class="primary-btn" type="submit">Verify &amp; start test <span>→</span></button>
+      <p id="accessError" class="error-message" role="alert"></p>
+    </form>
+    <p class="security-foot">🔐 Demo access code is configured in <code>app.js</code>. Do not use a client-side code for a live/high-stakes exam.</p>
+  </section>
+
+  <section id="examSection" class="exam-layout hidden">
+    <div class="exam-header">
+      <div><div class="eyebrow">Basic_Internal_Test</div><h2>Examination in progress</h2><p id="candidateLine">Candidate session</p></div>
+      <div class="timer-box"><span class="timer-label">TIME REMAINING</span><strong id="timer">40:00</strong><small>Do not leave this screen</small></div>
     </div>
-  </div>
-<script>
-  let timerInterval;
+    <div class="exam-meta"><span>📋 <b id="questionCount">Question 1 of 10</b></span><span>✓ One mark per correct answer</span><span id="violationBadge" class="violation-badge">Screen alerts: 0 / 4</span></div>
+    <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+    <div class="exam-grid">
+      <article class="question-card">
+        <div class="question-top"><span id="questionTag" class="question-tag">QUESTION 01</span><span class="mark-tag">1 MARK</span></div>
+        <h3 id="questionText">Loading question…</h3>
+        <div id="options" class="options"></div>
+        <div class="question-actions"><button id="previousBtn" class="secondary-btn" type="button">← Previous</button><span id="answeredLabel">0 answered</span><button id="nextBtn" class="primary-btn compact" type="button">Next question →</button></div>
+      </article>
+      <aside class="palette-card"><h3>Question palette</h3><p>Choose a number to navigate.</p><div id="palette" class="palette"></div><div class="palette-legend"><span><i class="legend-dot answered-dot"></i>Answered</span><span><i class="legend-dot current-dot"></i>Current</span><span><i class="legend-dot"></i>Unanswered</span></div><button id="submitBtn" class="submit-btn" type="button">Submit examination <span>→</span></button><small class="palette-note">Submission is final. Review your answers before submitting.</small></aside>
+    </div>
+    <div id="warningBanner" class="warning-banner hidden" role="alert"><span>⚠</span><div><b id="warningTitle">Exam integrity warning</b><p id="warningText">Please remain on the exam screen.</p></div><button id="dismissWarning" type="button" aria-label="Dismiss warning">×</button></div>
+  </section>
 
-  function openExam() {
-    const frame = document.getElementById('examFrame');
-    const btnSection = document.getElementById('start-btn-section');
-    const instructionText = document.getElementById('instruction-text');
-    const timerDisplay = document.getElementById('timer');
+  <section id="resultSection" class="result-card hidden">
+    <div class="result-icon" id="resultIcon">✓</div><div class="eyebrow centered">TEST SESSION COMPLETED</div>
+    <h2 id="resultTitle">Your result is ready!</h2><p id="resultSubtitle" class="card-subtitle centered">Your answers have been evaluated.</p>
+    <div class="score-panel"><div><span>YOUR SCORE</span><strong id="scoreValue">0/10</strong></div><div class="score-divider"></div><div><span>PERCENTAGE</span><strong id="percentageValue">0%</strong></div><div class="score-divider"></div><div><span>ATTEMPTED</span><strong id="attemptedValue">0/10</strong></div></div>
+    <div class="result-details" id="resultDetails"></div>
+    <div class="review-wrap"><h3>Answer review</h3><div id="answerReview"></div></div>
+    <button id="restartBtn" class="primary-btn" type="button">Return to home <span>↗</span></button>
+    <p class="privacy-note">This is your official exam result. generated by our Server.</p>
+  </section>
+</main>
 
-    // Google Form
-    frame.src = "https://forms.gle/BeXZAjXDVNNgaGoN9";
-
-    frame.style.display = "block";
-    btnSection.style.display = "none";
-    instructionText.style.display = "none";
-
-    // Start 30-minute timer
-    startTimer(30 * 60, timerDisplay);
-  }
-
-  function startTimer(duration, display) {
-    let timer = duration;
-
-    timerInterval = setInterval(() => {
-      const minutes = Math.floor(timer / 60);
-      const seconds = timer % 60;
-
-      display.textContent =
-        `Exam Time: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
-
-      timer--;
-
-      if (timer < 0) {
-        clearInterval(timerInterval);
-        endExam();
-      }
-    }, 1000);
-  }
-
-  function endExam() {
-    const frame = document.getElementById('examFrame');
-    const msg = document.getElementById('timeUpMsg');
-
-    frame.style.display = "none";
-    msg.style.display = "block";
-
-    document.getElementById('timer').textContent = "Exam Ended";
-
-    alert("⏰ Time is up! Your exam session has ended.");
-  }
-</script>
-
-</body>
-</html>
-
-
+<footer class="footer"><div class="footer-brand"><img src="assets/image/ntcicon.PNG" class="brand-logo"><div><b>NOOTECH COMPUTER CENTRE</b><small>Ashoknagar, Athgarh, Cuttack, Odisha</small></div></div><div class="footer-right"><span>Learn • Practice • Progress</span><small>© 2026 Nootech Computer Centre</small></div></footer>
+<div id="confirmModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><div class="modal"><div class="modal-icon">?</div><h2 id="confirmTitle">Submit your examination?</h2><p id="confirmText">Once submitted, you cannot change your answers.</p><div class="modal-actions"><button id="cancelSubmit" class="secondary-btn" type="button">Continue test</button><button id="confirmSubmit" class="submit-btn" type="button">Submit now</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>
