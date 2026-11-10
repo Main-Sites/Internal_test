@@ -48,12 +48,23 @@ function cleanMobile(value){return value.replace(/\D/g,"");}
 $("mobile").addEventListener("input", e => {e.target.value = cleanMobile(e.target.value).slice(0,10);});
 $("candidateForm").addEventListener("submit", e => {
  e.preventDefault(); $("formError").textContent = "";
- const name = $("candidateName").value.trim(), mobile = cleanMobile($("mobile").value), date = $("examDate").value;
+const name = $("candidateName").value.trim();
+const mobile = cleanMobile($("mobile").value);
+const date = $("examDate").value;
+const topic = $("examTopic").value;
+
+   
+   
  if(name.length < 2){$("formError").textContent="Please enter the candidate’s full name.";return;}
  if(!/^[6-9]\d{9}$/.test(mobile)){ $("formError").textContent="Enter a valid 10-digit Indian mobile number beginning with 6, 7, 8 or 9."; return; }
  if(!date){$("formError").textContent="Select the date of examination.";return;}
  if(EXAM_CONFIG.requireFutureOrTodayDate && date < $("examDate").min){$("formError").textContent="The examination date cannot be in the past.";return;}
- candidate = {name,mobile,examDate:date};
+ candidate = {
+  name,
+  mobile,
+  examDate: date,
+  examTopic: topic
+};
  $("accessError").textContent=""; $("accessCode").value=""; showView("accessSection"); $("accessCode").focus();
 });
 $("backToDetails").addEventListener("click",()=>showView("landing"));
