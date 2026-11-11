@@ -243,7 +243,7 @@ function parseQuestionCsv(text){
  const missing=required.filter(h=>!headers.includes(h));
  if(missing.length)throw new Error("Missing required CSV column(s): "+missing.join(", ")+". Download the template for the exact header names.");
  const index=Object.fromEntries(required.map(h=>[h,headers.indexOf(h)]));
- if(rows.length-1>50)throw new Error("This batch contains "+(rows.length-1)+" question rows. Import a maximum of 50 questions per batch.");
+ if(rows.length-1>50)throw new Error("This batch contains "+(rows.length-1)+" question rows. Import a maximum of 40 questions per batch.");
  const questions=[],errors=[];
  rows.slice(1).forEach((row,i)=>{
   const line=i+2;const get=h=>(row[index[h]]??"").trim();
