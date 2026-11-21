@@ -186,6 +186,7 @@ body{background:var(--paper);color:var(--ink)}
 .text-danger-btn{color:#ff8793}
 .field select option{background:#1b2537;color:#e7ecf8}
 
+
 /* Result review clarity and footer attribution — visual-only additions */
 .developer-credit{display:block;font-size:9px;color:#b7c3dc;margin-top:5px;letter-spacing:.15px}
 .review-item h4{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
